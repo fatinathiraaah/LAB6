@@ -8,42 +8,45 @@ import java.util.Scanner;
 
 public class L6Q3 
 {
-         public static void main(String[] args)//not yet
+         public static void main(String[] args)//alhamdulillah done!!! want to cry
          {
              
              Scanner s=new Scanner(System.in);
              int[]num=new int [10];
-           
+                       
              System.out.println("Enter 10 integers:");
+             
              //TO CAPTURE INTEGERS
              for(int i=0;i<=9;i++)
              {
                    num[i]=s.nextInt();                    
              }
-            System.out.println();     
+            System.out.println(); 
+            reverse(num);   
              /*TO DISPLAY INTEGERS
              System.out.print("The numbers are: ");
              for(int i=0;i<=9;i++)
              {
              System.out.print(num[i]+" ");
-             }   */             
-        
-            reverse(num);    
+             }   */    
+             
+          
          }
-         public static void reverse(int []num)
-         {   
-             int reversedNum=0;
-             for(int i=0;i<=9;i++)
+         public static void reverse(int[]num){
+              int reversedNum;
+              for(int i=0;i<=9;i++)
              {
               while(num[i]>0)
               {    
-                reversedNum = reversedNum * 10 + num[i] % 10;                               
-                num[i]=num[i]/10;              
+                reversedNum=num[i] % 10;  
+                System.out.print(reversedNum);                              
+                num[i]=num[i]/10;  
+             
               } 
-              
+               System.out.println();
              }
-             System.out.println(reversedNum);
-             System.out.println();
-
-         }
+          
+            
+             
+         }        
 }
